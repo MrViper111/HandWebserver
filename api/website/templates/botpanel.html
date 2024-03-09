@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='coolbase.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="main-body">
+
+        <div class="title-container" id="container1">
+            <div>
+                <h1><i class="bi bi-motherboard"></i> Pizza Sentinel Panel</h1>
+                <p>An interactive web panel used to manage the Pizza Sentinel.</p>
+            </div>
+
+            <div class="navbar" id="container2">
+                <div class="home-button" id="navbar-button" onclick="window.open('/pizzabot/panel')">
+                    <p><i class="bi bi-house-fill"></i> Home</p>
+                </div>
+                <div class="account-manager-button" id="navbar-button" onclick="window.open('/pizzabot/panel/config')">
+                    <p><i class="bi bi-gear-fill"></i> Config</p>
+                </div>
+                <div class="stats-button" id="navbar-button" onclick="window.open('/pizzabot/panel/ranks')">
+                    <p><i class="bi bi-award-fill"></i> Ranks</p>
+                </div>
+                <div class="logs-button" id="navbar-button" onclick="window.open('/pizzabot/panel/logs')">
+                    <p><i class="bi bi-terminal"></i> Logs</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="bot-actions-container">
+            <h2>Bot Actions</h2>
+
+            <button class="action-button">Start Bot</button>
+            <button class="action-button">Stop Bot</button>
+            <button class="action-button">Restart Bot</button>
+            <button class="action-button">Reload Bot</button>
+
+            <p style="margin-right: 12px;">Not what you were looking for? Try the <a href=""> bot's config</a>.</p>
+
+        </div>
+
+        <div id="container1">
+            <h2>Logs</h2>
+            <p>The 10 latest log entries. To see all the logs, click <a href="">here</a>.</p>
+
+            <div class="log-content" id="container2">
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+                <div id="log-message">
+                    <span style="color:gray;">10-11-23 6:47:03</span>
+                    <span style="background-color:aqua;border-radius:8px;padding:3px;margin-inline:10px;">INFO</span>
+                    <span style="color:white;">This is a super cool test</span>
+                </div>
+            </div>
+
+            <p>Refresh rate: <b>5 seconds</b></p>
+        </div>
+
+    </div>
+{% endblock %}

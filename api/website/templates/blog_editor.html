@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog Editor
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='blog_editor.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='blog_editor.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="main-body">
+
+        <center>
+            <h1>La Salle Center Blog Editor</h1>
+            <p>Create or delete blog posts.</p>
+        </center>
+
+        <div style="display: flex;">
+
+            <div id="container1" style="width: 100%;">
+                <h2>Create Blog Posts</h2>
+                <p>
+                    Blog posts are a way to relay information to parents, students, and even
+                    potential students. Make sure your blog post is concise yet informative.
+                </p>
+                
+                <div class="textbox-group field">
+                    <input type="input" class="textbox-field" id="title-textbox" placeholder="Title..." name="title"/>
+                    <label for="title" class="textbox-label">Blog Title</label>
+                </div>
+
+                <div class="textbox-group field">
+                    <textarea name="content" class="textbox-field" id="content-textbox" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' rows="1" cols="1"></textarea>
+                    <label for="title" class="textbox-label">Blog Content</label>
+                </div>
+
+                <p>
+                    Before creating your post, make sure you have proofread it and recieved approval
+                    from your center director to upload it.
+                </p>
+
+                <button class="post-button" onclick="createBlog()">Post Blog</button>
+
+            </div>
+
+            <div id="container1" style="width: 100%; height: fit-content;">
+                <h2>Delete Blog Posts</h2>
+                <p>
+                    If a mistake was made or a blog post didn't work out, then delete it.
+                    the blog post ID can be found under the post's content.
+                </p>
+                
+                <div class="textbox-group field">
+                    <input type="input" class="textbox-field" placeholder="Blog ID..." name="id" id="id-textbox"/>
+                    <label for="id" class="textbox-label">Blog ID</label>
+                </div>
+
+                <p>
+                    <b>WARNING!</b> Deleting a blog post is a permanent action!
+                    If you want to edit a blog post, then copy the text from the
+                    post you want to edit and create a new post. Then, delete the
+                    old post.
+                </p>
+
+                <button class="delete-button" onclick="deleteBlog()"><i class="bi bi-trash"></i> Delete Blog Post</button>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

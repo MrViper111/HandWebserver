@@ -1,0 +1,87 @@
+
+.delete-button {
+    padding: 10px;
+    outline: none;
+    border-color: rgb(255, 69, 69);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(255, 69, 69);
+}
+
+.delete-button:hover {
+    background-color: rgb(255, 69, 69);
+    color: black;
+}
+
+.post-button {
+    padding: 10px;
+    outline: none;
+    border-color: rgb(61, 212, 61);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(61, 212, 61);
+}
+
+.post-button:hover {
+    background-color: rgb(61, 212, 61);
+    color: black;
+}
+
+.textbox-group {
+    position: relative;
+    padding: 15px 0px 20px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.textbox-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .textbox-label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.textbox-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: gray;
+}
+
+.textbox-field:focus {
+    ~ .textbox-label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        font-weight:700;    
+    }
+
+    padding-bottom: 6px;  
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+}
+
+.textbox-field{
+    &:required,&:invalid { box-shadow:none; }
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Ranks
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='coolbase.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="main-body">
+
+        <div id="container1">
+            <h2><i class="bi bi-cone-striped"></i> Under Maintenance</h2>
+            <p>This page is currently under maintenance. Please come back later!</p>
+        </div>
+
+        <div id="container1">
+            <p>I am currently rebuilding my entire website - the frontend and the backend. Many things might not work as intended. My old design for everything was pretty bad... I also hope to make authentication a little more secure.</p>
+            <p>Ok that is all o7</p>
+        </div>
+
+    </div>
+{% endblock %}

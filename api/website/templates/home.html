@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='home.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="main-body">
+
+        <!-- <center>
+            <h1>Carlow Center for Medical Innovation Blog</h1>
+            <p>This is a student-run blog site for the La Salle Carlow Center for Medical Innovation!</p>
+        </center> -->
+
+    </div>
+{% endblock %}

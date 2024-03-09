@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Ranks
+{% endblock %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='botpanel_ranks.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='coolbase.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='botpanel_ranks.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="main-body">
+
+        <div class="title-container" id="container1">
+            <div>
+                <h1><i class="bi bi-motherboard"></i> Pizza Sentinel Panel > Ranks</h1>
+                <p>Manage internal Pizza Sentinel ranks.</p>
+            </div>
+
+            <div class="navbar" id="container2">
+                <div class="home-button" id="navbar-button" onclick="window.open('/pizzabot/panel')">
+                    <p><i class="bi bi-house-fill"></i> Home</p>
+                </div>
+                <div class="account-manager-button" id="navbar-button" onclick="window.open('/pizzabot/panel/config')">
+                    <p><i class="bi bi-gear-fill"></i> Config</p>
+                </div>
+                <div class="stats-button" id="navbar-button" onclick="window.open('/pizzabot/panel/ranks')">
+                    <p><i class="bi bi-award-fill"></i> Ranks</p>
+                </div>
+                <div class="logs-button" id="navbar-button" onclick="window.open('/pizzabot/panel/logs')">
+                    <p><i class="bi bi-terminal"></i> Logs</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="container1">
+            <p>Select an account to manage:</p>
+
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="select-dropdown">Dropdown</button>
+                <div id="select-dropdown" class="select-dropdown-content">
+                  <input type="text" placeholder="Search..." id="select-dropdown-input" onkeyup="filterFunction()">
+                  <span>mrviper111</span>
+                  <span>justjaws</span>
+                  <span>mastadons</span>
+                  <span>lemonchad</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="container1" class="account-info-container">
+            <div>
+                <div id="account-info-element">
+                    <span style="color: rgb(190, 190, 190);"><i class="bi bi-person-fill"></i> Username</span>
+                    <span style="margin-left: 10px;color: white;"><br>mrviper111</span>
+                </div>
+                <br>
+                <div id="account-info-element">
+                    <span style="color: rgb(190, 190, 190);"><i class="bi bi-person-badge"></i> User ID</span>
+                    <span style="margin-left: 10px;color: white"><br>561345180029157382</span>
+                </div>
+                <br>
+                <div id="account-info-element">
+                    <span style="color: rgb(190, 190, 190);"><i class="bi bi-award-fill"></i> Rank</span>
+                    <span style="margin-left: 10px;color:  white"><br>ADMIN</span>
+    
+                    <div class="rank-dropdown">
+                        <i class="bi bi-gear-fill" style="color: gray;" onclick="console.log('pensi')"></i>
+                        <div class="rank-dropdown-content">
+                            <span>ADMIN</span>
+                            <span>AGENT</span>
+                            <span>MEMBER</span>
+                            <span>GUEST</span>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+                <!-- <img src="https://cdn.discordapp.com/avatars/561345180029157382/ce5fb2a4e6e61ad54381b4b8805b6eaa?size=100" alt="PFP" style="margin-right: 20px;"> -->
+
+        </div>
+
+        <div id="container1">
+            <p>Are you sure you would like to make these changes?</p>
+        </div>
+
+    </div>
+{% endblock %}
